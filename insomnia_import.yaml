@@ -1,0 +1,253 @@
+_type: export
+__export_format: 4
+__export_date: 2024-09-15T21:00:00.128Z
+__export_source: insomnia.desktop.app:v10.0.0
+resources:
+  - _id: req_e772f60dba0845b9ae1c4ab8f3f4a4e8
+    parentId: fld_9b856c90e1de4292927ebaa4ca38dc74
+    modified: 1726431875938
+    created: 1726415795583
+    url: localhost:8081/exam
+    name: build Exam
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"MATH":"5",
+        	"HISTORY":"1"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726415795583
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9b856c90e1de4292927ebaa4ca38dc74
+    parentId: wrk_fc12a82e76e84f70ad7f2509501cae64
+    modified: 1726415790081
+    created: 1726415790081
+    name: EXAM
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1726415790081
+    _type: request_group
+  - _id: wrk_fc12a82e76e84f70ad7f2509501cae64
+    parentId: null
+    modified: 1726410866657
+    created: 1726410866657
+    name: Examinator
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_5a57379eaa114b179dd9d03d359a48f4
+    parentId: wrk_fc12a82e76e84f70ad7f2509501cae64
+    modified: 1726429332788
+    created: 1726414069916
+    url: localhost:8761
+    name: Instances currently registered with Eureka
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726414069916
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_17aa64ef6b2e4460869db55bc5252de9
+    parentId: fld_5143f7811bf44c3182986c88c00ed1fa
+    modified: 1726431885009
+    created: 1726411938950
+    url: localhost:8082/api/questions?amount=2
+    name: get Questions (+ amount)
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726411938950
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_5143f7811bf44c3182986c88c00ed1fa
+    parentId: wrk_fc12a82e76e84f70ad7f2509501cae64
+    modified: 1726411960183
+    created: 1726411898803
+    name: History
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1726411898803
+    _type: request_group
+  - _id: req_875ac64e58014799867fb01dc37a0263
+    parentId: fld_5143f7811bf44c3182986c88c00ed1fa
+    modified: 1726431719196
+    created: 1726412938048
+    url: localhost:8082/questions/
+    name: get Questions by ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726411938900
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e16e5f7cbc4148b29f0817cb4d46dceb
+    parentId: fld_5143f7811bf44c3182986c88c00ed1fa
+    modified: 1726432412641
+    created: 1726412097155
+    url: localhost:8082/questions
+    name: Сколько лет в одном веке?
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"question":"Сколько лет в одном веке?",
+        	"answer": "100"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726411938850
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3a9a2b9a0f544a5f9f088456ccaa486e
+    parentId: fld_5143f7811bf44c3182986c88c00ed1fa
+    modified: 1726431703356
+    created: 1726412269194
+    url: localhost:8082/questions
+    name: Сколько длилась 100-летняя война?
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"question":"Сколько длилась 100-летняя война?",
+        	"answer": "116"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726411416212
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0dab8de952ba4e7cbdd99fdb5328b337
+    parentId: fld_1134f4fb69174b3e8c1c0de30ce45fe8
+    modified: 1726431914508
+    created: 1726410893574
+    url: localhost:8080/api/questions?amount=2
+    name: get Questions
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.0.0
+    authentication: {}
+    metaSortKey: -1726410893574
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_1134f4fb69174b3e8c1c0de30ce45fe8
+    parentId: wrk_fc12a82e76e84f70ad7f2509501cae64
+    modified: 1726411963570
+    created: 1726410876720
+    name: Math
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1726410876720
+    _type: request_group
+  - _id: env_adce3a6e83cf10f40019e6b197d746ce618bd498
+    parentId: wrk_fc12a82e76e84f70ad7f2509501cae64
+    modified: 1726410866662
+    created: 1726410866662
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1726410866662
+    _type: environment
+  - _id: jar_adce3a6e83cf10f40019e6b197d746ce618bd498
+    parentId: wrk_fc12a82e76e84f70ad7f2509501cae64
+    modified: 1726410866665
+    created: 1726410866665
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
